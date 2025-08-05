@@ -27,7 +27,7 @@
 
       for (let uid of uids) {
         try {
-          const res = await fetch(`https://api.bilibili.com/x/space/acc/info?mid=${uid}`);
+          const res = await fetch(`https://icy-queen-6150.a0910725303.workers.dev/?uid=${uid}`);
           const data = await res.json();
           const name = data.code === 0 ? data.data.name : '查詢失敗';
           const row = table.insertRow();
